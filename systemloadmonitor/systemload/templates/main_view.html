@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>System Load Monitor</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <h1>System Load Monitor</h1>
+
+  <h2>CPU</h2>
+  {% for core_percent in cpu_core_percents %}
+    <p>Core {{ forloop.counter }}: <strong>{{ core_percent }}%</strong></p>
+  {% endfor %}
+  <p>Total: <strong>{{ cpu_total_percent }}%</strong></p>
+
+  <h2>Memory</h2>
+  <p>Used <strong>{{ memory_used }}</strong> out of <strong>{{ memory_total }}</strong> (<strong>{{ memory_percent }}%</strong>)</p>
+</body>
+</html>

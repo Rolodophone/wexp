@@ -3,9 +3,11 @@ CPU and memory information for various servers.
 
 # Dependencies
 
+Python 3 (tested on version 3.9.5)
+
 Django (tested on version 3.2.5)
 
-Python 3 (tested on version 3.9.5)
+psutil (tested on version 5.8.0)
 
 # How to run
 
